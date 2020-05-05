@@ -58,21 +58,21 @@ class ArticuloUsaTela(models.Model): # CLASE DE ASOCIACION ENTRE ARTICULO Y TELA
 
 
 class proov_telas(models.Model):
-	nombreProov = models.CharField(max_length=100)
-	direccion = models.CharField(max_length=100)
-	tel = models.CharField(max_length=100)
+    nombreProov = models.CharField(max_length=100)
+    direccion = models.CharField(max_length=100)
+    tel = models.CharField(max_length=100)
 
 
 class Temporadas(models.Model):
-	nombreTemporada = models.CharField(max_length=100)
-	fechaInicio = models.DateField()
-	fechaFinal = models.DateField()
-	año = models.CharField(max_length=4)
+    nombreTemporada = models.CharField(max_length=100)
+    fechaInicio = models.DateField()
+    fechaFinal = models.DateField()
+    anio = models.CharField(max_length=4)
 
 
-	def __str__(self):
-		return self.nombreTemporada + ' ' + self.año
+    def __str__(self):
+        return self.nombreTemporada + ' ' + self.anio
 
 class ArtEnTemporada(models.Model):
-	articulo = models.ForeignKey(Articulo, on_delete=models.DO_NOTHING, blank=True, null=True)
-	temporada = models.ForeignKey(Temporadas, on_delete=models.DO_NOTHING, blank=True, null=True)
+    articulo = models.ForeignKey(Articulo, on_delete=models.DO_NOTHING, blank=True, null=True)
+    temporada = models.ForeignKey(Temporadas, on_delete=models.DO_NOTHING, blank=True, null=True)
