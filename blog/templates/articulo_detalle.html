@@ -1,0 +1,86 @@
+ {% load staticfiles %}
+    <html>
+        <head>
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+            <link rel="stylesheet" href="{% static 'css/judas_gestion.css' %}">
+
+            <title>ARTICULOS</title>
+        </head>
+        <body>
+            <div>
+                <h1>Articulos</h1>
+            </div>
+
+<div class="container">
+
+  <p>Esto es un detalle de un articulo en particular</p>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Caracteristica</th>
+        <th>Clasificacion</th>
+        <th>Temporada</th>
+      </tr>
+    </thead>
+    <tbody>
+
+
+    {% for articulo in articulo %}
+
+      <tr>
+        <td>{{articulo.nombreArticulo}}</td>
+        <td>{{articulo.caracteristica}}</td>
+        <td>{{articulo.clasificacion}}</td>
+        <td>{{articulo.temporadas}}</td>
+      </tr>
+
+    {% endfor %}
+
+
+    </tbody>
+  </table>
+</div>
+
+
+<div class="container">
+
+  <p>Esto es una lista de telas utilizadas en este articulo en particular</p>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Caracteristica</th>
+        <th>Clasificacion</th>
+        <th>Temporada</th>
+      </tr>
+    </thead>
+    <tbody>
+
+
+    {% for articulo in articulo %}
+
+      <tr>
+        <td>{{articulo.nombreArticulo}}</td>
+        <td>{{articulo.caracteristica}}</td>
+        <td>{{articulo.clasificacion}}</td>
+        <td>{{articulo.temporadas}}</td>
+      </tr>
+
+    {% endfor %}
+
+
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+
+        </body>
+    </html>
